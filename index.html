@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hao123网站换肤</title>
+<link rel ="stylesheet" href="css.css">
+
+<!--<style type = "text/css">
+	header,article,footer{
+		font-size:2em;
+		height:200px;
+		text-align: center;
+	}
+	.skin1{
+		background-color: green;
+		font-size:3em;
+	}
+	.skin2{
+		background-color: yellow;
+	}
+</style>-->
+</head>
+<body >
+<div class=wrapper>
+<header>
+<img src="https://gss0.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/res/img/richanglogo168_24.png">
+<div class="page">
+	<span> 4月07日   周五   三月十一</span>
+</div>
+
+<div id="co">
+<button class="con con1" onclick="changeSkin('skin1')"></button>
+<button class="con con2" onclick="changeSkin('skin2')"></button>
+<button class="con con3" onclick="changeSkin('skin3')"></button>
+</div>
+</header>
+<article>
+    <div class="on">
+	<a href="https://www.hao123.com/">首页</a>
+	<span class="one">电视剧</span>
+	<span class="one">最新电影</span>
+	<span class="one">新闻头条</span>
+	<span class="one">八卦娱乐</span>
+	<span class="one">军事热点</span>
+	<span class="one">热门游戏</span>
+	<span class="one">小游戏</span>
+	<span class="one">今日特价</span>
+	<span class="one one1">特价旅游</span>
+	</div>
+	<div class="two">
+    <span>权威推荐</span>
+    <a href="http://www.people.com.cn/">人民网</a>
+    <a href="http://www.xinhuanet.com/">新华网</a>
+    <a href="http://www.cctv.com/">央视网</a>
+    <a href="https://www.hao123.com/link/https/?key=http%3A%2F%2Fwww.cri.cn%2F&&c=02B85CDBEBE9F60F9E0897F2B8F006D2">国际在线</a>
+    <a href="http://cn.chinadaily.com.cn/">中国日报网</a>
+    <a href="http://www.china.com.cn/">中国网</a>
+    <a href="http://www.ce.cn/">中国经济网</a>
+    <a href="http://www.ce.cn/">光明网</a>
+    <a href="http://www.cnr.cn/">央广网</a>
+    <a href="http://www.qstheory.cn/">求是网</a>
+    <a href="http://www.youth.cn/">中国青年网</a>
+    <a href="http://www.cac.gov.cn/">中国广信网</a>
+	</div>
+
+</article>
+
+</div>
+<script type="text/javascript">
+    //改变HTML样式
+	//document.getElementById("myDiv").style.color="green";
+	//网页换肤
+	function changeSkin(skin){
+		document.body.className=skin;
+		localStorage.setItem("theme",skin);//存储Item
+	}
+	window.onload=function(){
+		var theme=localStorage.getItem("theme");//获取theme
+		if(theme !=""){
+			changeSkin(theme);
+		}
+	}
+	
+</script>
+</body>
+</html>
